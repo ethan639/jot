@@ -1520,8 +1520,8 @@ async function 生成配置信息(userID, hostName, sub, UA, RproxyIP, _url, fak
 
                 return randomIP.join('.');
             }
-            addresses = addresses.concat('104.18.0.0:443#CFnat');
-            //let counter = 1;
+            //addresses = addresses.concat('104.18.0.0:443#CFnat');
+            let counter = 1;
             if (hostName.includes("worker") || hostName.includes("notls")) {
                 const randomPorts = httpPorts.concat('80');
                 addressesnotls = addressesnotls.concat(
@@ -4568,6 +4568,7 @@ async function nginx() {
 	`
     return text;
 }
+
 
 
 
