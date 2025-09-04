@@ -1,7 +1,7 @@
 
 import { connect } from 'cloudflare:sockets';
 
-let userID = 'd57d6f63-7843-4198-ae4d-a9123acab2c9';
+let userID = '36155fd2-2a2d-423f-b018-4b01887eeffa';
 let proxyIP = 'ts.hpc.tw';
 let DNS64Server = '';
 //let sub = '';
@@ -1525,12 +1525,12 @@ async function 生成配置信息(userID, hostName, sub, UA, RproxyIP, _url, fak
             if (hostName.includes("worker") || hostName.includes("notls")) {
                 const randomPorts = httpPorts.concat('80');
                 addressesnotls = addressesnotls.concat(
-                    cfips.map(cidr => generateRandomIPFromCIDR(cidr) + ':' + randomPorts[Math.floor(Math.random() * randomPorts.length)] + '#CF随机节点' + String(counter++).padStart(2, '0'))
+                    cfips.map(cidr => generateRandomIPFromCIDR(cidr) + ':' + randomPorts[Math.floor(Math.random() * randomPorts.length)] + '#CF' + String(counter++).padStart(2, '0'))
                 );
             } else {
                 const randomPorts = httpsPorts.concat('443');
                 addresses = addresses.concat(
-                    cfips.map(cidr => generateRandomIPFromCIDR(cidr) + ':' + randomPorts[Math.floor(Math.random() * randomPorts.length)] + '#CF随机节点' + String(counter++).padStart(2, '0'))
+                    cfips.map(cidr => generateRandomIPFromCIDR(cidr) + ':' + randomPorts[Math.floor(Math.random() * randomPorts.length)] + '#CF' + String(counter++).padStart(2, '0'))
                 );
             }
         }
@@ -4568,3 +4568,4 @@ async function nginx() {
 	`
     return text;
 }
+
