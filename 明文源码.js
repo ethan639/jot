@@ -1188,12 +1188,12 @@ function gettyConfig(userID, hostName) {
   \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP5}:${PT5}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V5\n
   \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP6}:${PT6}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V6\n
   \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP7}:${PT7}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V7\n
-  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V8\n
-  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V9\n
-  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V10\n
-  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V11\n
-  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V12\n
-  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V13`);
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=dk.cotco.cloudns.be&fp=randomized&type=ws&host=dk.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V8\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=dk.cotco.cloudns.be&fp=randomized&type=ws&host=dk.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V9\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=dk.cotco.cloudns.be&fp=randomized&type=ws&host=dk.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V10\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=dk.cotco.cloudns.be&fp=randomized&type=ws&host=dk.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V11\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=dk.cotco.cloudns.be&fp=randomized&type=ws&host=dk.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V12\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=dk.cotco.cloudns.be&fp=randomized&type=ws&host=dk.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V13`);
 		return `${\u0076\u006c\u0065\u0073\u0073share}`
 	}
 
@@ -2501,4 +2501,5 @@ return `{
 		  }
 		}`;
 } 
+
 
