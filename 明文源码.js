@@ -4,7 +4,7 @@ import { connect } from "cloudflare:sockets";
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
-let userID = "df8392c1-d23a-466b-bba4-04ddfcb29168";
+let userID = "799e8135-e487-4889-97f6-be8fb569678d";
 
 const proxyIPs = ["ts.hpc.tw"];
 const cn_hostnames = [''];
@@ -845,8 +845,8 @@ async function handleUDPOutBound(webSocket, cloudflareResponseHeader, log) {
  * @returns {string}
  */
 function get\u0076\u006c\u0065\u0073\u0073Config(userID, hostName) {
-  const w\u0076\u006c\u0065\u0073\u0073ws = `\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${CDNIP}:8880?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#Ck`;
-  const p\u0076\u006c\u0065\u0073\u0073wstls = `\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${CDNIP}:8443?encryption=none&security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=%2F%3Fed%3D2560#Cks`;
+  const w\u0076\u006c\u0065\u0073\u0073ws = `\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${CDNIP}:8880?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#Mf`;
+  const p\u0076\u006c\u0065\u0073\u0073wstls = `\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${CDNIP}:8443?encryption=none&security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=%2F%3Fed%3D2560#Mfs`;
   const note = `ProxyIP全局运行中：${proxyIP}:${proxyPort}`;
   const ty = `https://${hostName}/${userID}/ty`
   const cl = `https://${hostName}/${userID}/cl`
@@ -856,28 +856,28 @@ function get\u0076\u006c\u0065\u0073\u0073Config(userID, hostName) {
   const psb = `https://${hostName}/${userID}/psb`
 
   const wk\u0076\u006c\u0065\u0073\u0073share = btoa(`
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP1}:${PT1}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V1\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP2}:${PT2}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V2\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP3}:${PT3}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V3\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP4}:${PT4}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V4\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP5}:${PT5}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V5\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP6}:${PT6}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V6\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP7}:${PT7}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V7\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V8\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V9\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V10\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V11\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V12\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V13`);
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP1}:${PT1}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V1\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP2}:${PT2}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V2\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP3}:${PT3}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V3\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP4}:${PT4}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V4\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP5}:${PT5}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V5\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP6}:${PT6}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V6\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP7}:${PT7}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V7\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V8\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V9\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V10\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V11\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V12\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V13`);
 
 
   const pg\u0076\u006c\u0065\u0073\u0073share = btoa(`
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V8\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V9\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V10\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V11\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V12\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V13`);	
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V8\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V9\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V10\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V11\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V12\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V13`);	
 
 	
   const noteshow = note.replace(/\n/g, '<br>');
@@ -1181,19 +1181,19 @@ ${displayHtml}
 
 function gettyConfig(userID, hostName) {
 	const \u0076\u006c\u0065\u0073\u0073share = btoa(`
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP1}:${PT1}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V1\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP2}:${PT2}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V2\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP3}:${PT3}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V3\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP4}:${PT4}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V4\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP5}:${PT5}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V5\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP6}:${PT6}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V6\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP7}:${PT7}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CK_V7\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V8\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V9\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V10\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V11\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V12\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V13`);
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP1}:${PT1}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V1\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP2}:${PT2}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V2\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP3}:${PT3}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V3\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP4}:${PT4}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V4\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP5}:${PT5}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V5\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP6}:${PT6}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V6\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP7}:${PT7}?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V7\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V8\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V9\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V10\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V11\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V12\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=mf.cotco.cloudns.be&fp=randomized&type=ws&host=mf.cotco.cloudns.be&path=%2F%3Fed%3D2560#CF_V13`);
 		return `${\u0076\u006c\u0065\u0073\u0073share}`
 	}
 
@@ -1969,12 +1969,12 @@ return `{
 
 function getptyConfig(userID, hostName) {
 	const \u0076\u006c\u0065\u0073\u0073share = btoa(`
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V8\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V9\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V10\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V11\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V12\n
-\u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=ck.cotco.dns-dynamic.net&fp=randomized&type=ws&host=ck.cotco.dns-dynamic.net&path=%2F%3Fed%3D2560#CK_V13`);	
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP8}:${PT8}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V8\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP9}:${PT9}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V9\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP10}:${PT10}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V10\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP11}:${PT11}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V11\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP12}:${PT12}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V12\n
+  \u0076\u006c\u0065\u0073\u0073\u003A//${userID}\u0040${IP13}:${PT13}?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#CF_V13`);	
 		return `${\u0076\u006c\u0065\u0073\u0073share}`
 	}
 	
